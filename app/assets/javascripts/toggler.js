@@ -3,6 +3,11 @@ function init() {
   $toggleLinks.click(function(ev) {
     var $detail = $(this).siblings('.detail');
     $detail.toggleClass('hidden');
+    if($detail.hasClass('hidden')) {
+      $(this).text('Show Details');
+    } else {
+      $(this).text('Hide Details');
+    }
     ev.preventDefault();
   });
 
